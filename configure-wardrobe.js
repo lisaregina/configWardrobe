@@ -1,40 +1,34 @@
-function combination(){
-    let size = [50, 
-                75,
-                100,
-                120];
+const Combination=() =>{
+    module.exports ={
+};
+};
 
+    function combination(){
+        var size = [50, 
+                    75,
+                    100,
+                    120];
 
-    let wall = 250;
+        const wall = 250;
 
-    let combo = [];
+        var combo = []; //hier kommen die Kombinationen hinein mit combo.push()
 
-    for(let i = 0; i < size.length; i ++){ 
-
-        let num = size[i];
-
-        let diff = wall - num;
+        var sum = 0;            
         
-        combo.push([num]);
+        for(let i=0; sum < wall; i++){             //5*50
+            let index;
+            index = size[i];
 
-        for(diff > 0; i++;){
-            let num = size[i];
-            
-            diff = wall - num;
+            sum += index;
+            combo.push(index);
 
-            combo.push([num]);
+            if(sum < wall){
+                sum += index;
+                combo.push(index);
+            }else{break;}
+           
+        }
+        console.log(combo)
+    };
 
-            if(diff == 0){
-                break;
-            }
-        };
-
-        if(diff == 0){
-            break;
-        };        
-    }
-    
-    return combo;
-}
-
-console.log(combination());
+    combination();
