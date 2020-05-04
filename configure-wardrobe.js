@@ -27,11 +27,7 @@ function combination(){
             if(diff == 0){
                 break;
             }
-        };
-
-        if(diff == 0){
-            break;
-        };        
+        };    
     }
     
     return combo;
